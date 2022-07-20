@@ -1,0 +1,66 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#main-grid {
+  display: grid;
+}
+
+#hero-image img {
+  max-width: 100%;
+}
+
+.button {
+  border: 2px solid #bebebe;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+  #main-grid {
+    grid-template-areas: "hero hero" "intro-text intro-text" "features features";
+  }
+  #hero-image,
+#hero-text {
+    padding: 50px;
+  }
+  #hero-image {
+    background: grey;
+    background-image: url("https://picsum.photos/800?grayscale");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: hero;
+  }
+  #intro-text {
+    text-align: center;
+    grid-area: intro-text;
+    background: #bebebe;
+  }
+  #features {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-area: features;
+    padding: 20px;
+  }
+  #features .feature-item {
+    background: #bebebe;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #main-grid {
+    grid-template-areas: "hero hero hero" "intro-text intro-text intro-text" "features features features";
+  }
+  #main-grid img {
+    max-width: 700px;
+  }
+}
